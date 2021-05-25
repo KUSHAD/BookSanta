@@ -73,6 +73,7 @@ export default class WelcomeScreen extends Component {
 				Platform.OS === "web"
 					? alert("You Have Been Succesfully Login")
 					: Alert.alert("Success", "You Have Been Succesfully Login");
+				this.props.navigation.navigate("Tab");
 			})
 			.catch((error) => {
 				Platform.OS === "web"

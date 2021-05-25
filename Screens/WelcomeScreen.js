@@ -73,7 +73,7 @@ export default class WelcomeScreen extends Component {
 				Platform.OS === "web"
 					? alert("You Have Been Succesfully Login")
 					: Alert.alert("Success", "You Have Been Succesfully Login");
-				this.props.navigation.navigate("Tab");
+				this.props.navigation.navigate("Drawer");
 			})
 			.catch((error) => {
 				Platform.OS === "web"
@@ -246,13 +246,11 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontSize: 32,
-		fontVariant: "bold",
 		textDecorationLine: "underline",
 		textAlign: "center",
 	},
 	subtitle: {
 		fontSize: 15,
-		fontVariant: "100",
 		color: "grey",
 		textDecorationLine: "underline",
 	},

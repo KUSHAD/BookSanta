@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, StyleSheet, TextInput, View } from "react-native";
-import { firebaseAuth, firebaseFirestore } from "../config";
+import { firebaseAuth, firebaseFirestore, time } from "../config";
 export default class BookRequest extends React.Component {
 	constructor(props) {
 		super(props);
@@ -14,6 +14,7 @@ export default class BookRequest extends React.Component {
 		return Math.random().toString(36).substring(7);
 	};
 	handleSubmit = () => {
+		console.log(time.now);
 		const { bookName, reason } = this.state;
 		const uid = this.uuid();
 		firebaseFirestore.collection("requests").add({

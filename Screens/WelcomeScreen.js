@@ -84,7 +84,11 @@ export default class WelcomeScreen extends Component {
 
 	showModal = () => {
 		return (
-			<Modal visible={this.state.isModalVisible}>
+			<Modal
+				presentationStyle='formSheet'
+				animationType='slide'
+				collapsable
+				visible={this.state.isModalVisible}>
 				<KeyboardAvoidingView style={styles.innerContainer}>
 					<TextInput
 						style={styles.input}

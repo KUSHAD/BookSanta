@@ -39,7 +39,14 @@ export default class BookDonate extends React.Component {
 					<View key={item.uid}>
 						<Text>{item.bookName}</Text>
 						<Text>{item.reason}</Text>
-						<Button title='View' onPress={() => {}} />
+						<Button
+							title='View'
+							onPress={() => {
+								this.props.navigation.navigate("MoreDetails", {
+									details: item,
+								});
+							}}
+						/>
 					</View>
 				)}
 			/>

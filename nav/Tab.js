@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "react-navigation-tabs";
-import BookDonate from "../Screens/BookDonate";
 import BookRequest from "../Screens/BookRequest";
+import { Stack } from "./Stack";
 
 export const TopTab = createBottomTabNavigator(
 	{
@@ -8,7 +8,7 @@ export const TopTab = createBottomTabNavigator(
 			screen: BookRequest,
 		},
 		DonateScreen: {
-			screen: BookDonate,
+			screen: Stack,
 		},
 	},
 	{

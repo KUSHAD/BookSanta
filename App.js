@@ -16,6 +16,7 @@ export default function App() {
 const SwitchNav = createSwitchNavigator({
 	Auth: WelcomeScreen,
 	Drawer: Drawer,
+	TopTab: TopTab,
 });
 
 const AppContainer = createAppContainer(SwitchNav);

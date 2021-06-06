@@ -1,5 +1,7 @@
 import { createDrawerNavigator } from "react-navigation-drawer";
 import CustomSideBar from "../Components/CustomSideBar.component";
+import MyDonations from "../Screens/MyDonations";
+import Notification from "../Screens/Notification";
 import SettingsScreen from "../Screens/SettingsScreen";
 import { TopTab } from "./Tab";
 export const Drawer = createDrawerNavigator(
@@ -9,6 +11,12 @@ export const Drawer = createDrawerNavigator(
 		},
 		Settings: {
 			screen: SettingsScreen,
+		},
+		MyDonations: {
+			screen: MyDonations,
+		},
+		NotificationScreen: {
+			screen: Notification,
 		},
 	},
 	{

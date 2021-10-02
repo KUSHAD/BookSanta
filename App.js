@@ -5,18 +5,18 @@ import { Drawer } from "./nav/Drawer";
 import { TopTab } from "./nav/Tab";
 import WelcomeScreen from "./Screens/WelcomeScreen";
 export default function App() {
-	return (
-		<>
-			<StatusBar style='auto' translucent />
-			<AppContainer />
-		</>
-	);
+  return (
+    <>
+      <StatusBar style="auto" translucent />
+      <AppContainer />
+    </>
+  );
 }
 
 const SwitchNav = createSwitchNavigator({
-	Auth: WelcomeScreen,
-	Drawer: Drawer,
-	TopTab: TopTab,
+  Auth: WelcomeScreen,
+  Drawer: Drawer,
+  TopTab: TopTab,
 });
 
 const AppContainer = createAppContainer(SwitchNav);

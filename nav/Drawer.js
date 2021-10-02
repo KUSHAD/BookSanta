@@ -5,25 +5,25 @@ import Notification from "../Screens/Notification";
 import SettingsScreen from "../Screens/SettingsScreen";
 import { TopTab } from "./Tab";
 export const Drawer = createDrawerNavigator(
-	{
-		Home: {
-			screen: TopTab,
-		},
-		Settings: {
-			screen: SettingsScreen,
-		},
-		MyDonations: {
-			screen: MyDonations,
-		},
-		NotificationScreen: {
-			screen: Notification,
-		},
-	},
-	{
-		contentComponent: CustomSideBar,
-		swipeDistanceThreshold: 0.5,
-	},
-	{
-		initialRouteName: "Home",
-	}
+  {
+    Home: {
+      screen: TopTab,
+    },
+    Settings: {
+      screen: SettingsScreen,
+    },
+    MyDonations: {
+      screen: MyDonations,
+    },
+    NotificationScreen: {
+      screen: Notification,
+    },
+  },
+  {
+    contentComponent: CustomSideBar,
+    swipeDistanceThreshold: 0.5,
+  },
+  {
+    initialRouteName: "Home",
+  }
 );

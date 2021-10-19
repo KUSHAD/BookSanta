@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View } from "react-native";
 import { Header, Icon, Badge } from "react-native-elements";
-import { firebaseFirestore } from "../config";
+import { firebaseAuth, firebaseFirestore } from "../config";
 
 class CustomHeader extends Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class CustomHeader extends Component {
     firebaseFirestore
       .collection("all-notifications")
       .where("status", "==", "unread")
+      .where("targetUserId", "==", firebaseAuth.currentUser.email)
       .onSnapshot(({ docs }) => {
         const unreadNotifications = docs.length;
         this.setState({ notifyValue: unreadNotifications });

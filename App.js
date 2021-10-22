@@ -4,11 +4,15 @@ import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { Drawer } from "./nav/Drawer";
 import { TopTab } from "./nav/Tab";
 import WelcomeScreen from "./Screens/WelcomeScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
 export default function App() {
   return (
     <>
       <StatusBar style="auto" translucent />
-      <AppContainer />
+      <SafeAreaProvider>
+        <AppContainer />
+      </SafeAreaProvider>
     </>
   );
 }

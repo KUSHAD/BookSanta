@@ -12,6 +12,7 @@ class MyDonations extends Component {
   async componentDidMount() {
     await firebaseFirestore
       .collection("all-donations")
+      .where("acceptedUserId", "==", firebaseAuth.currentUser.email)
       .get()
       .then((snapshot) => {
         const docs = snapshot.docs.map((doc) => doc.data());

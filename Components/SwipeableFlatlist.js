@@ -41,7 +41,7 @@ class SwipeableFlatlist extends Component {
         bottomDivider
       >
         <ListItem.Chevron name="book" type="font-awesome" color="#696969" />
-        <ListItem.Title>{data.item.message}</ListItem.Title>
+        <ListItem.Title>{JSON.stringify(data.item.message)}</ListItem.Title>
       </ListItem>
     </Animated.View>
   );
